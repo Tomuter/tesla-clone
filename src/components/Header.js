@@ -1,18 +1,22 @@
-import React,{useState} from 'react'
-import styled from 'styled-components'
+import React,{useState} from 'react';
+import styled from 'styled-components';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
-import {selectCars}  from '../features/car/carSlice'
-import {useSelector} from 'react-redux'
+import {selectCars}  from '../features/car/carSlice';
+import {useSelector} from 'react-redux';
+
+
 function Header() {
 
   const[burgerStatus,setBurgerStatus]=useState(false);
+
   const openBurger=()=>{
     setBurgerStatus(true);
   }
   const closeBurger=()=>{
     setBurgerStatus(false);
   }
+  //from redux
   const cars=useSelector(selectCars)
 
   return (
